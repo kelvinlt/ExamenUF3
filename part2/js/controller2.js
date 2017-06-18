@@ -11,6 +11,7 @@ app.controller('myCtrl', function($scope, $http) {
             url: "resposta.php?inicio=si"
         }).then(function mySuccess(response) {
             $scope.imagen = response.data;
+            $scope.dispImg = true;
         }, function myError(response) {
             $scope.imagen = "Error";
         })};
